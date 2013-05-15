@@ -93,34 +93,79 @@
           %td
           %td 10,000
           %td P1.0
-          %td P10,0000
+          %td P10,000.00
         %tr
           %td
-          %td 10,000
-          %td P1.0
-          %td P10,0000
+          %td 25,000
+          %td P0.9
+          %td P22,500.00
         %tr
           %td
-          %td 10,000
-          %td P1.0
-          %td P10,0000
+          %td 50,000
+          %td P0.85
+          %td P42,500.00
         %tr
           %td
-          %td 10,000
-          %td P1.0
-          %td P10,0000
+          %td 100,000
+          %td P0.75
+          %td P75,000.00
         %tr
           %td
-          %td 10,000
-          %td P1.0
-          %td P10,0000
+          %td 250,000
+          %td P0.65
+          %td P162,500.00
         %tr
           %td
-          %td 10,000
-          %td P1.0
-          %td P10,0000
+          %td 500,000
+          %td P0.55
+          %td P275,000.00
         %tr
           %td
-          %td 10,000
-          %td P1.0
-          %td P10,0000
+          %td 1,000,000
+          %td P0.45
+          %td P450,000.00
+        %tr
+          %td
+          %td 1,000,000+
+          %td Call us!
+          %td Call us!
+
+  %hr
+  .row
+    .span2
+      %h2 Question?
+      %small
+        Want to learn more? Bump us a quick
+        =link_to "email", contact_us_path
+        and we'll help you right away!
+    .span3
+      %h2 Try it out
+      %small Seeing is believing, so try it out for yourself. No credit card required.
+    .span2.signup
+      =link_to "Sign up now","#myModal", class: "btn btn-success btn-large", data: {toggle: "modal"}
+
+#myModal.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"}
+    %h3#myModalLabel Sign-up!
+  .modal-body
+    %p SMSGoGo is still under development. Please leave us your email and we will contact you the moment it is released.
+    %br
+    = form_for @user, html: {class: "form-horizontal"}, url: users_path, method: :create do |f|
+      %div
+        .control-group
+          %label.control-label Name
+          .controls
+            = f.text_field :name, placeholder: "Name"
+        .control-group
+          %label.control-label Email
+          .controls
+            = f.text_field :email, placeholder: "Email"
+  .modal-footer
+    %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Close
+    %button.btn.btn-success Keep me informed!
+
+:javascript
+  $(".modal-footer .btn-success").click(function(){
+    $("#new_user").submit();
+  });

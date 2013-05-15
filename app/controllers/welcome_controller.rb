@@ -9,6 +9,7 @@ class WelcomeController < ApplicationController
 
   def pricing
     @active = "pricing"
+    @user = User.new
   end
   
 end

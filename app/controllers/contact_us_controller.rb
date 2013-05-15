@@ -3,6 +3,7 @@ class ContactUsController < ApplicationController
     @active = "contact"
     @contact = ContactUs.new
   end
+
   def create
     @contact = ContactUs.new params["contact_us"]
     if @contact.save
