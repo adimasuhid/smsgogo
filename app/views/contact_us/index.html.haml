@@ -1,0 +1,16 @@
+.container-narrow
+  %h1 Tell us what you think
+  = form_for @contact, url: contact_us_path, method: :create  do |f|
+    %div
+      %label Name
+      = f.text_field :name, placeholder: "Name"
+      %label Email
+      = f.text_field :email, placeholder: "Email"
+      %label Phone
+      = f.text_field :phone, placeholder: "Phone"
+      %label Country
+      = f.text_field :country, placeholder: "Country"
+      %label Message
+      = f.text_area :message, placeholder: "Message"
+      %hr
+      = submit_tag "Ok", class: "btn btn-success"

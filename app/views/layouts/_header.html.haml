@@ -1,0 +1,13 @@
+.container-narrow
+  .masthead
+    %ul.nav.nav-pills.pull-right
+      %li{class: @active == "root" ? "active" : nil }
+        =link_to "Home", root_path
+      %li{class: @active == "about" ? "active" : nil }
+        =link_to "About",about_path
+      %li{class: @active == "pricing" ? "active" : nil }
+        =link_to "Pricing", pricing_path
+      %li{class: @active == "contact" ? "active" : nil }
+        =link_to "Contact", contact_us_path
+    .logo-header
+      =image_tag "logoheader-horizontal.png", style: "height: 60px"
