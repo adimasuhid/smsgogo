@@ -4,14 +4,24 @@
     %title Smsgogo
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
+    = google_webfonts_link_tag :open_sans => [300,400,700]
+    = google_webfonts_link_tag :bevan => [300,400,700]
     = csrf_meta_tags
   %body
     = render "layouts/header"
     - if flash[:success]
-      %p.success
-        = flash[:success]
+      .container-narrow
+        .alert.alert-success
+          %button.close
+            &times;
+          %strong Success!
+          = flash[:success]
     - if flash[:error]
-      %p.error
-        = flash[:error]
+      .container-narrow
+        .alert.alert-error
+          %button.close
+            &times;
+          %strong Oops!
+          = flash[:error]
     = yield
     = render "layouts/footer"

@@ -1,16 +1,44 @@
 .container-narrow
-  %h1 Tell us what you think
-  = form_for @contact, url: contact_us_path, method: :create  do |f|
+  %hr
+  %h1 
+    Tell us what 
+    %strong you 
+    think
+  %br
+  = form_for @contact, url: contact_us_path, html: {class: "form-horizontal"},method: :create  do |f|
     %div
-      %label Name
-      = f.text_field :name, placeholder: "Name"
-      %label Email
-      = f.text_field :email, placeholder: "Email"
-      %label Phone
-      = f.text_field :phone, placeholder: "Phone"
-      %label Country
-      = f.text_field :country, placeholder: "Country"
-      %label Message
-      = f.text_area :message, placeholder: "Message"
-      %hr
-      = submit_tag "Ok", class: "btn btn-success"
+      .row-fluid
+        .span8
+          .control-group
+            %label.control-label Name
+            .controls
+              = f.text_field :name, placeholder: "Name"
+          .control-group
+            %label.control-label Email
+            .controls
+              = f.text_field :email, placeholder: "Email"
+          .control-group
+            %label.control-label Phone
+            .controls
+              = f.text_field :phone, placeholder: "Phone"
+          .control-group
+            %label.control-label Country
+            .controls
+              = f.text_field :country, placeholder: "Country"
+          .control-group
+            %label.control-label Message
+            .controls
+              = f.text_area :message, placeholder: "Message",rows: 10
+          .control-group
+            .controls
+              = submit_tag "Send", class: "btn btn-success"
+        .span4.contact-details
+          %p Number:
+          %h5 12323234
+          %hr
+          %p Address:
+          %h5 some address, Quezon City
+          %hr
+          %p Email:
+          %h5 support@smsgogo.co
+

@@ -6,6 +6,16 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
+h1,h2,h3,h4,h5,p,body{
+  font-family: "Open Sans";
+  font-weight: 300;
+}
+
+h1,h2,h3,h4,h5{
+
+  font-weight: 400;
+}
+
 .nav-pills .active a{
   color: #ffffff;
   background-color: #028eb3;

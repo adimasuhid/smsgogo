@@ -24,6 +24,7 @@ padding-top: 20px;
 .jumbotron h1 {
   font-size: 72px;
   line-height: 1;
+  font-weight: 300;
 }
 .jumbotron .btn {
   font-size: 21px;
@@ -49,4 +50,11 @@ padding-top: 20px;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f9dae', endColorstr='#0b7186',GradientType=0 );
   color:white;
 }
-
+.signup{
+  .btn-success{display:block; margin-top:40px;}
+}
+#checkout{
+  text-align:center;
+  float:none;
+  margin:0 auto;
+}

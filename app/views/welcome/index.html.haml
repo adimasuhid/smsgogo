@@ -2,12 +2,12 @@
   %br
   .container-narrow
     .jumbotron
-      %h1 Market Wherever
+      %h1 
+        Market
+        %strong Wherever
       %p.lead 
         SMSGoGo’s powerful text messaging software suite allows you to reach your customers when and 
-        where it matters most. No reliance on internal IT departments or outsourced development shops to
-        get started. The easy to use interface, segmentation, delivery, and tracking tools empower you to start
-        today and never look back.
+        where it matters most. 
       =link_to "Check us out for free!", pricing_path, class: "btn btn-large btn-success"
   %br
 
@@ -15,16 +15,37 @@
   %hr
   .row-fluid.marketing
     .span6
-      %h4 Bulk Sending
-      %p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-      %h4 Permission-based
+      %h4 
+        %i.icon-gamepad
+        Easy-to-use Interface
+      %p
+        No reliance on internal IT departments or outsourced development shops to
+        get started. 
+      %h4 
+        %i.icon-reply
+        Response Messaging
       %p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
-      %h4 Surveys
+      %h4 
+        %i.icon-group
+        Surveys
       %p Maecenas sed diam eget risus varius blandit sit amet non magna.
     .span6
-      %h4 Response Messaging
-      %p Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
-      %h4 Automation
-      %p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
-      %h4 API Access
+      %h4 
+        %i.icon-envelope-alt
+        Bulk Sending
+      %p  Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+      %h4 
+        %i.icon-cogs
+        Automation
+      %p
+        The easy to use interface, segmentation, delivery, and tracking tools empower you to start
+        today and never look back.
+      %h4 
+        %i.icon-cloud
+        API Access
       %p Maecenas sed diam eget risus varius blandit sit amet non magna.
+  .row-fluid
+    %hr
+    .span6#checkout
+      %h3 Want to learn more? 
+      =link_to "Check us out for free!", pricing_path, class: "btn btn-large btn-success"

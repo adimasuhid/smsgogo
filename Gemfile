@@ -16,6 +16,7 @@ group :assets do
   gem 'twitter-bootstrap-rails'
   gem 'haml-rails'
   gem 'font-awesome-rails'
+  gem 'google-webfonts'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

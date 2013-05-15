@@ -1,4 +1,5 @@
 .container-narrow
+  %hr
   %h1 Pricing
   .container-narrow
     %table.table.table-striped
@@ -161,11 +162,28 @@
           %label.control-label Email
           .controls
             = f.text_field :email, placeholder: "Email"
+    .alert.alert-error.hide
+      %button.close
+        &times;
+      %strong Oops!
+      All fields must be completed
+
   .modal-footer
     %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Close
     %button.btn.btn-success Keep me informed!
 
+//refactor
 :javascript
   $(".modal-footer .btn-success").click(function(){
-    $("#new_user").submit();
+    //search for client validations
+    var name = $("#user_name").val();
+    var email = $("#user_email").val();
+    if (name =="" || email =="")
+      $(".alert").removeClass("hide");
+    else
+      $("#new_user").submit();
+  });
+
+  $(".alert .close").click(function(){
+    $(".alert").addClass("hide");
   });
