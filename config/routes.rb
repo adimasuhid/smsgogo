@@ -1,5 +1,4 @@
 Smsgogo::Application.routes.draw do
-  resources "welcome", only: [:index]
   resources "contact_us"
   resources "users"
   match "/about" => "welcome#about"
