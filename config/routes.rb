@@ -1,8 +1,9 @@
 Smsgogo::Application.routes.draw do
-  #resources "contact_us"
-  #resources "users"
-  #match "/about" => "welcome#about"
-  #match "/pricing" => "welcome#pricing"
+  resources "welcome", only: [:index]
+  resources "contact_us"
+  resources "users"
+  match "/about" => "welcome#about"
+  match "/pricing" => "welcome#pricing"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
