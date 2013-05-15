@@ -2,7 +2,7 @@
   %hr
   %h1 Pricing
   %br
-  .container-narrow
+  .container-narrow.pricing
     %table.table.table-striped
       %thead
         %tr
@@ -77,13 +77,13 @@
             %i.icon-ok
         %tr
           %td
-            %h4 Choose your package
+            %strong Choose your package
           %td
-            %button.btn.btn-success Sign up!
+            =link_to "Sign up","#myModal", class: "btn btn-success", data: {toggle: "modal"}
           %td
-            %button.btn.btn-success Sign up!
+            =link_to "Sign up","#myModal", class: "btn btn-success", data: {toggle: "modal"}
           %td
-            %button.btn.btn-success Sign up!
+            =link_to "Sign up","#myModal", class: "btn btn-success", data: {toggle: "modal"}
 
   %hr
   .container-narrow

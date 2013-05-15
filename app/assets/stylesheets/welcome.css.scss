@@ -58,3 +58,8 @@ padding-top: 20px;
   float:none;
   margin:0 auto;
 }
+
+.pricing{
+  th,td {text-align:center}
+  td:nth-child(1){text-align:left}
+}
