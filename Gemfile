@@ -17,7 +17,6 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'twitter-bootstrap-rails'
   gem 'font-awesome-rails'
-  gem 'google-webfonts'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -25,6 +24,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'google-webfonts'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'pg', group: [:production]
