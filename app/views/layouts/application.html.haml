@@ -3,9 +3,9 @@
   %head
     %title Smsgogo
     = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
     = google_webfonts_link_tag :open_sans => [300,400,700]
     = google_webfonts_link_tag :bevan => [300,400,700]
+    = javascript_include_tag "application"
     = csrf_meta_tags
   %body
     = render "layouts/header"
