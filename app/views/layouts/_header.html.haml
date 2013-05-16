@@ -10,4 +10,4 @@
       %li{class: @active == "contact" ? "active" : nil }
         =link_to "Contact", contact_us_path
     .logo-header
-      =image_tag "logoheader-horizontal.png", style: "height: 60px"
+      =link_to image_tag("logoheader-horizontal-small.png", style: "height:60px"), root_path
