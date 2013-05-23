@@ -45,7 +45,21 @@
         API Access
       %p Maecenas sed diam eget risus varius blandit sit amet non magna.
   .row-fluid
+    = render "contact_us/index"
+  .row-fluid
+    = render "pricing"
+  .row-fluid
+    = render "about"
+  .row-fluid
     %hr
-    .span6#checkout
-      %h3 Want to learn more? 
-      =link_to "Check us out for free!", pricing_path, class: "btn btn-large btn-success"
+    .span3
+      %h2 Question?
+      %small
+        Want to learn more? Bump us a quick
+        =link_to "email", contact_us_path
+        and we'll help you right away!
+    .span4
+      %h2 Try it out
+      %small Seeing is believing, so try it out for yourself. No credit card required.
+    .span4.signup
+      =link_to "Sign up for our Private Beta","#myModal", class: "btn btn-success btn-large", data: {toggle: "modal"}
