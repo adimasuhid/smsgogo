@@ -1,0 +1,42 @@
+#myModal.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"}
+    %h3#myModalLabel Sign-up!
+  .modal-body
+    %p We are still in Beta. Please leave us your email and we'll contact you soon.
+    %br
+    = form_for @user, html: {class: "form-horizontal"}, url: users_path, method: :create do |f|
+      %div
+        .control-group
+          %label.control-label Name
+          .controls
+            = f.text_field :name, placeholder: "Name"
+        .control-group
+          %label.control-label Email
+          .controls
+            = f.text_field :email, placeholder: "Email"
+    .alert.alert-error.hide
+      %button.close
+        &times;
+      %strong Oops!
+      All fields must be completed
+
+  .modal-footer
+    %button.btn{"aria-hidden" => "true", "data-dismiss" => "modal"} Close
+    %button.btn.btn-success Save!
+
+//refactor
+:javascript
+  $(".modal-footer .btn-success").click(function(){
+    //search for client validations
+    var name = $("#user_name").val();
+    var email = $("#user_email").val();
+    if (name =="" || email =="")
+      $(".alert").removeClass("hide");
+    else
+      $("#new_user").submit();
+  });
+
+  $(".alert .close").click(function(){
+    $(".alert").addClass("hide");
+  });
