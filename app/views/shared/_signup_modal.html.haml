@@ -1,9 +1,9 @@
 #myModal.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
   .modal-header
     %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"}
-    %h3#myModalLabel Sign-up!
+    %h3#myModalLabel Sign up for our Private Beta slots
   .modal-body
-    %p We are still in Beta. Please leave us your email and we'll contact you soon.
+    %p We want to reach you! So please leave us your email and we'll contact you when once we approve your slot.
     %br
     = form_for @user, html: {class: "form-horizontal"}, url: users_path, method: :create do |f|
       %div
