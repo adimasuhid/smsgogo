@@ -5,13 +5,17 @@
 $ ->
 
   goToByScroll = (id) ->
+
+    $(".nav li").removeClass("active")
+
+    $("#"+id).addClass("active")
     
     # Remoove "link" from the ID
     id = id.replace("link", "")
     
     # Scroll
     $("html,body").animate
-      scrollTop: $("#" + id).offset().top
+      scrollTop: $("#" + id).offset().top - 70
     , "slow"
 
   $(".nav li").click (e) ->
