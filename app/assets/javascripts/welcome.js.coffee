@@ -4,11 +4,31 @@
 
 $ ->
 
-  goToByScroll = (id) ->
-
+  setToActive = (id) ->
     $(".nav li").removeClass("active")
-
     $("#"+id).addClass("active")
+
+  getScrolledID = ->
+    home = $("#home").offset().top
+    contact = $("#contact").offset().top
+    pricing = $("#pricing").offset().top
+    about = $("#about").offset().top
+
+    current_position = $(window).scrollTop() + 70
+
+    if current_position < contact
+      position =  "homelink"
+    else if current_position >= contact && current_position < pricing
+      position =  "contactlink"
+    else if current_position >= pricing && current_position < about
+      position =  "pricinglink"
+    else
+      position =  "aboutlink"
+
+    return position
+
+  goToByScroll = (id) ->
+    setToActive(id)
     
     # Remoove "link" from the ID
     id = id.replace("link", "")
@@ -25,4 +45,16 @@ $ ->
     
     # Call the scroll function
     goToByScroll $(this).attr("id")
+
+  $("#checkout").click (e) ->
+    e.preventDefault()
+    goToByScroll "pricinglink"
+
+  $("#contactus").click (e) ->
+    e.preventDefault()
+    goToByScroll "contactlink"
+
+  $(window).scroll ->
+    position = getScrolledID()
+    setToActive(position)
 

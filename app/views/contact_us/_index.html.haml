@@ -2,8 +2,7 @@
   %hr
   %h1 
     Tell us what 
-    %strong you 
-    think
+    %strong you need
   %br
   = form_for @contact, url: contact_us_path, html: {class: "form-horizontal"},method: :create  do |f|
     %div
@@ -28,17 +27,26 @@
           .control-group
             %label.control-label Message
             .controls
-              = f.text_area :message, placeholder: "Message",rows: 10
+              = f.text_area :message, placeholder: "Message",rows: 7
           .control-group
             .controls
               = submit_tag "Send", class: "btn btn-success"
         .span4.contact-details
           %p Number:
-          %h5 12323234
+          %h5 +63 2 5707884
           %hr
           %p Address:
-          %h5 some address, Quezon City
+          %h5 
+            2nd Floor Topy Building 1
+            No.3 Economia Street
+            Libis, Quezon City
+            Philippines
           %hr
           %p Email:
           %h5 support@smsgogo.co
+          %hr
+          %p Social Media:
+          %h5
+            %i.icon-facebook-sign.icon-2x
+            %i.icon-twitter-sign.icon-2x
 

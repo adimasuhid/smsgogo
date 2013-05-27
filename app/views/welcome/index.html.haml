@@ -8,42 +8,62 @@
       %p.lead 
         SMSGoGo’s powerful text messaging software suite allows you to reach your customers when and 
         where it matters most. 
-      =link_to "Check us out for free!", pricing_path, class: "btn btn-large btn-success"
+      =link_to "Check us out for free!", pricing_path, class: "btn btn-large btn-success", id: "checkout"
   %br
 
 .container-narrow
   %hr
+  .row-fluid
+    .span12{style: "text-align:center"}
+      %h4
+        SMSGoGo is SMS messaging software built for marketers.  Our easy to use, scalable, and allows you to engage with your customers quickly and easily, without the need for IT professionals or lengthy implementations.
+  %hr
   .row-fluid.marketing
     .span6
+      %h4 
+        %i.icon-cloud
+        SMSGoGo Goes Where You Go
+      %p
+        Our software-as-a-Service (SaaS) platform makes SMSGoGo accessible everywhere you need it.
       %h4 
         %i.icon-gamepad
         Easy-to-use Interface
       %p
-        No reliance on internal IT departments or outsourced development shops to
-        get started. 
+        You do not need a computer science degree to use SMSGoGo. Our interface makes executing your marketing strategy quick, easy, and efficient.
       %h4 
         %i.icon-reply
         Response Messaging
-      %p Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
-      %h4 
-        %i.icon-group
-        Surveys
-      %p Maecenas sed diam eget risus varius blandit sit amet non magna.
+      %p
+        SMSGoGo two-way messaging capabilities makes it easy for you to listen to what your customers are saying.
+      %h4
+        %i.icon-bullseye
+        Targetting
+      %p
+        SMSGoGo's segmentation engine makes targeting your customers quick and simple, enabling you to send the right message to the right people at the right time.
     .span6
       %h4 
         %i.icon-envelope-alt
-        Bulk Sending
-      %p  Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+        Bulk Messaging
+      %p
+        SMSGoGo makes sending messages the easy part.  It is just up to you to know want to say.
       %h4 
         %i.icon-cogs
         Automation
       %p
-        The easy to use interface, segmentation, delivery, and tracking tools empower you to start
-        today and never look back.
+        Don't have time to constantly create great experiences for each of your customers?  You do not have to.  Automate it with our automation tools!
       %h4 
-        %i.icon-cloud
+        %i.icon-code
         API Access
-      %p Maecenas sed diam eget risus varius blandit sit amet non magna.
+      %p
+        We integrate with you as easily as saying, "REST API."
+        %br
+        %br
+        %br
+      %h4 
+        %i.icon-group
+        Surveys, Voting, and more, oh my!
+      %p
+        Ready-made templates for voting, surveys, and dynamic messaging makes creating interactive experiences with your customers as calming as a walk in the park. 
   .row-fluid#contact
     = render "contact_us/index"
   .row-fluid#pricing
@@ -56,7 +76,7 @@
       %h2 Question?
       %small
         Want to learn more? Bump us a quick
-        =link_to "email", contact_us_path
+        =link_to "email", contact_us_path, id: "contactus"
         and we'll help you right away!
     .span4
       %h2 Try it out
