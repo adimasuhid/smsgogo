@@ -64,3 +64,10 @@ padding-top: 20px;
   th,td {text-align:center}
   td:nth-child(1){text-align:left}
 }
+
+.socialmedia{
+  color:black;
+  &:hover{
+    text-decoration:none;
+  }
+}
