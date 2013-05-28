@@ -16,14 +16,14 @@ $ ->
 
     current_position = $(window).scrollTop() + 70
 
-    if current_position < contact
+    if current_position < about
       position =  "homelink"
-    else if current_position >= contact && current_position < pricing
-      position =  "contactlink"
-    else if current_position >= pricing && current_position < about
+    else if current_position >= about && current_position < pricing
+      position =  "aboutlink"
+    else if current_position >= pricing && current_position < contact
       position =  "pricinglink"
     else
-      position =  "aboutlink"
+      position =  "contactlink"
 
     return position
 
