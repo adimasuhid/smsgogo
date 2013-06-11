@@ -7,4 +7,8 @@ class UsersController < ApplicationController
       redirect_to root_path, flash: {:success => "You weren't able to sign up. Please send your details again."}
     end
   end
+
+  def callback
+    raise params.to_yaml
+  end
 end
