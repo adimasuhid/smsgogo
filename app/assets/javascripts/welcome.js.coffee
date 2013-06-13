@@ -38,7 +38,7 @@ $ ->
       scrollTop: $("#" + id).offset().top - 70
     , "slow"
 
-  $(".nav li").click (e) ->
+  $(".landing li").click (e) ->
     
     # Prevent a page reload when a link is pressed
     e.preventDefault()

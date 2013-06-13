@@ -2,6 +2,8 @@
   .container-narrow
     .masthead
       %ul.nav.nav-pills.pull-right
+        = render "devise/menu/login_items"
+      %ul.nav.nav-pills.pull-right.landing
         %li#homelink{class: @active == "root" ? "active" : nil }
           =link_to "Home", root_path
         %li#aboutlink{class: @active == "about" ? "active" : nil }
