@@ -28,6 +28,7 @@ gem 'google-webfonts'
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'pg', group: [:production]
+gem 'devise'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

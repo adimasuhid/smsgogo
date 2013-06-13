@@ -1,4 +1,6 @@
 Smsgogo::Application.routes.draw do
+  devise_for :users
+
   resources "welcome", only: [:index]
   resources "contact_us", only: [:create]
   resources "users" 
