@@ -4,6 +4,7 @@ Smsgogo::Application.routes.draw do
   resources "welcome", only: [:index]
   resources "contact_us", only: [:create]
   resources "users" 
+  resources "dashboard", only: [:index]
 
   match "/about" => "welcome#about"
   match "/pricing" => "welcome#pricing"
