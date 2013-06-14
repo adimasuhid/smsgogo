@@ -30,6 +30,8 @@ gem 'jquery-rails'
 gem 'pg', group: [:production]
 gem 'devise'
 gem 'rspec-rails'
+gem 'filepicker-rails'
+gem 'simple_form'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

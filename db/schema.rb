@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130613155600) do
+ActiveRecord::Schema.define(:version => 20130614020631) do
 
   create_table "contact_us", :force => true do |t|
     t.string   "name"
@@ -26,8 +26,14 @@ ActiveRecord::Schema.define(:version => 20130613155600) do
   create_table "lists", :force => true do |t|
     t.string   "name"
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "csv_url"
+    t.string   "opt_in_kw"
+    t.string   "opt_out_kw"
+    t.text     "opt_in_confirmation"
+    t.text     "opt_out_confirmation"
+    t.text     "opt_error"
   end
 
   create_table "recipient_lists", :force => true do |t|

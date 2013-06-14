@@ -1,0 +1,3 @@
+= simple_form_for @list, url: lists_step2_path, method: :get do |f|
+  = f.filepicker_field :csv_url, button_class: "btn", mimetypes: "text/csv"
+  = f.submit "Save", class: "btn btn-success"
