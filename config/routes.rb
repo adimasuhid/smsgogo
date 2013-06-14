@@ -5,7 +5,7 @@ Smsgogo::Application.routes.draw do
   resources :contact_us, only: [:create]
   resources :users
   resources :dashboard, only: [:index]
-  resources :lists, only: [:index]
+  resources :lists, only: [:index, :create]
 
   match "/lists/step2" => "lists#step2", as: "lists_step2"
   match "/lists/step3" => "lists#step3", as: "lists_step3"
