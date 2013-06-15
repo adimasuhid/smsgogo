@@ -55,6 +55,9 @@ $ ->
     goToByScroll "contactlink"
 
   $(window).scroll ->
-    position = getScrolledID()
-    setToActive(position)
+    #check if in landing page
+    in_home = $("#home").length
+    if in_home
+      position = getScrolledID()
+      setToActive(position)
 

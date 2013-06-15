@@ -3,14 +3,15 @@
     .masthead
       %ul.nav.nav-pills.pull-right
         = render "devise/menu/login_items"
-      %ul.nav.nav-pills.pull-right.landing
-        %li#homelink{class: @active == "root" ? "active" : nil }
-          =link_to "Home", root_path
-        %li#aboutlink{class: @active == "about" ? "active" : nil }
-          =link_to "About", root_path
-        %li#pricinglink{class: @active == "pricing" ? "active" : nil }
-          =link_to "Pricing", root_path
-        %li#contactlink{class: @active == "contact" ? "active" : nil }
-          =link_to "Contact Us", root_path
+      - if landing?
+        %ul.nav.nav-pills.pull-right.landing
+          %li#homelink{class: @active == "root" ? "active" : nil }
+            =link_to "Home", root_path
+          %li#aboutlink{class: @active == "about" ? "active" : nil }
+            =link_to "About", root_path
+          %li#pricinglink{class: @active == "pricing" ? "active" : nil }
+            =link_to "Pricing", root_path
+          %li#contactlink{class: @active == "contact" ? "active" : nil }
+            =link_to "Contact Us", root_path
       .logo-header
         =link_to image_tag("logoheader-horizontal-small-beta.png", style: "height:60px"), root_path
