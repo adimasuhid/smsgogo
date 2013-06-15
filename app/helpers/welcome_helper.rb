@@ -4,4 +4,8 @@ module WelcomeHelper
     request.fullpath == "/"
   end
 
+  def path?(url)
+    request.fullpath.include? url
+  end
+
 end

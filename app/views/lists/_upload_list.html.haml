@@ -1,5 +1,5 @@
 = simple_form_for @list, url: lists_step2_path, method: :get do |f|
-  = f.input :filename
+  = f.input :filename, readonly: true
   = f.filepicker_field :csv_url, button_class: "btn", mimetypes: "text/csv", onchange: "getFilename(event)"
   = link_to "Save", "#myModal",class: "btn btn-success", role: "button", data: {toggle: "modal"}
 

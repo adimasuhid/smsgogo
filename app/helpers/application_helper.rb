@@ -1,3 +1,3 @@
 module ApplicationHelper
-  #include WelcomeHelper
+  include WelcomeHelper
 end

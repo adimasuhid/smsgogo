@@ -13,7 +13,9 @@ class ListsController < ApplicationController
 
       #create_recipients
       numbers.each do |num|
-        recipient = Recipient.create!(number:num[0])
+        #search if recipient exists
+        recipient = Recipient.where(number:num[0]).first
+        recipient ||= Recipient.create!(number:num[0])
         recipients << recipient.id
       end
       

@@ -1,10 +1,10 @@
 = simple_form_for @list, url: lists_path, method: :post do |f|
   = f.hidden_field :csv_url
-  = f.input :filename, label: "Uploaded File"
-  = f.input :name, label: "List Name"
-  = f.input :opt_in_kw, label: "Opt-in Keyword"
-  = f.input :opt_in_confirmation, as: :text, label: "Opt-in Confirmation Message", :input_html => {:rows => 3}
-  = f.input :opt_out_kw, label: "Opt-out Keyword"
-  = f.input :opt_out_confirmation, as: :text, label: "Opt-out Confirmation Message", :input_html => {:rows => 3}
-  = f.input :opt_error, as: :text, label: "Opt-out Error Message", :input_html => {:rows => 3}
+  = f.input :filename, label: "Uploaded File", readonly: true
+  = f.input :name, label: "List Name", readonly: true
+  = f.input :opt_in_kw, label: "Opt-in Keyword", readonly: true
+  = f.input :opt_in_confirmation, as: :text, label: "Opt-in Confirmation Message", :input_html => {:rows => 3}, readonly: true
+  = f.input :opt_out_kw, label: "Opt-out Keyword", readonly: true
+  = f.input :opt_out_confirmation, as: :text, label: "Opt-out Confirmation Message", :input_html => {:rows => 3}, readonly: true
+  = f.input :opt_error, as: :text, label: "Opt-out Error Message", :input_html => {:rows => 3}, readonly: true
   = f.submit "Save", class: "btn btn-success"
