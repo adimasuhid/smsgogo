@@ -1,0 +1,5 @@
+= simple_form_for @message, url: messages_step4_path, method: :get do |f|
+  = f.hidden_field :name
+  = f.hidden_field :content
+  = f.input :list_id, collection: @lists, prompt: "Select a List"
+  = f.submit "Save", class: "btn btn-success"

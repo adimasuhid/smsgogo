@@ -1,0 +1,6 @@
+= simple_form_for @message do |f|
+  = f.input :name
+  = f.input :content, input_html: {rows: 3}
+  = f.hidden_field :list_id
+  = f.input :list, disabled: true, input_html: {value: @list.name}
+  = f.submit "Save", class: "btn btn-success"

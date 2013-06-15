@@ -5,9 +5,23 @@ class ListsController < ApplicationController
 
   def create
     @list = current_user.lists.new params[:list]
-    #process parsing
 
     if @list.save
+      recipients = []
+
+      numbers = @list.parse_csv
+
+      #create_recipients
+      numbers.each do |num|
+        recipient = Recipient.create!(number:num[0])
+        recipients << recipient.id
+      end
+      
+      #create_recipient_lists
+      recipients.each do |rec|
+        @list.recipient_lists.create!(recipient_id: rec)
+      end
+
       redirect_to lists_path, :flash => {success: "You have successfully added List #{@list.name}!"}
     end
   end

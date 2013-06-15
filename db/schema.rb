@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130614020631) do
+ActiveRecord::Schema.define(:version => 20130615105150) do
 
   create_table "contact_us", :force => true do |t|
     t.string   "name"
@@ -34,6 +34,17 @@ ActiveRecord::Schema.define(:version => 20130614020631) do
     t.text     "opt_in_confirmation"
     t.text     "opt_out_confirmation"
     t.text     "opt_error"
+    t.string   "filename"
+  end
+
+  create_table "messages", :force => true do |t|
+    t.string   "name"
+    t.text     "content"
+    t.string   "type"
+    t.integer  "list_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
 
   create_table "recipient_lists", :force => true do |t|

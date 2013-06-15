@@ -1,3 +1,11 @@
 = simple_form_for @list, url: lists_step2_path, method: :get do |f|
-  = f.filepicker_field :csv_url, button_class: "btn", mimetypes: "text/csv"
-  = f.submit "Save", class: "btn btn-success"
+  = f.input :filename
+  = f.filepicker_field :csv_url, button_class: "btn", mimetypes: "text/csv", onchange: "getFilename(event)"
+  = link_to "Save", "#myModal",class: "btn btn-success", role: "button", data: {toggle: "modal"}
+
+:javascript
+  //shows filepicker filename after onchange
+  //if you can make it universal, cool
+  function getFilename(event) {
+    $("#list_filename").val(event.fpfile.filename);
+  }

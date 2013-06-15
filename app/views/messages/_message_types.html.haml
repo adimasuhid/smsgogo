@@ -1,0 +1,4 @@
+- @message_types.each do |mtype|
+  = link_to messages_step2_path, class: "btn", disabled: mtype == "Outbound" ? false : true do
+    %i.icon-comments-alt
+    = mtype

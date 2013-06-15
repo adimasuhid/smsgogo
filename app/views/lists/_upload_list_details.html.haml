@@ -1,10 +1,11 @@
 = simple_form_for @list, url: lists_step3_path, method: :get do |f|
   = f.hidden_field :csv_url
+  = f.hidden_field :filename
   = f.input :name, label: "List Name"
   = f.input :opt_in_kw, label: "Opt-in Keyword"
-  = f.input :opt_in_confirmation, as: :text, label: "Opt-in Confirmation Message", :input_html => {:rows => 3}
+  = f.input :opt_in_confirmation, label: "Opt-in Confirmation Message", :input_html => {:rows => 3}
   = f.input :opt_out_kw, label: "Opt-out Keyword"
-  = f.input :opt_out_confirmation, as: :text, label: "Opt-out Confirmation Message", :input_html => {:rows => 3}
-  = f.input :opt_error, as: :text, label: "Opt-out Error Message", :input_html => {:rows => 3}
+  = f.input :opt_out_confirmation, label: "Opt-out Confirmation Message", :input_html => {:rows => 3}
+  = f.input :opt_error, label: "Opt-out Error Message", :input_html => {:rows => 3}
   = f.submit "Save", class: "btn btn-success"
 

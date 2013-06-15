@@ -1,5 +1,6 @@
 = simple_form_for @list, url: lists_path, method: :post do |f|
-  = f.input :csv_url, label: "Uploaded File"
+  = f.hidden_field :csv_url
+  = f.input :filename, label: "Uploaded File"
   = f.input :name, label: "List Name"
   = f.input :opt_in_kw, label: "Opt-in Keyword"
   = f.input :opt_in_confirmation, as: :text, label: "Opt-in Confirmation Message", :input_html => {:rows => 3}

@@ -62,5 +62,8 @@ module Smsgogo
 
     #Filepicker API
     config.filepicker_rails.api_key = "AEB5gH2eSq8r535p7OQEEz"
+
+    #autoload lib
+    config.autoload_paths += %W(#{config.root}/lib)
   end
 end

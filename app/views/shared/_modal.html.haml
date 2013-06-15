@@ -1,0 +1,9 @@
+#myModal.modal.hide.fade
+  .modal-header
+    %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"} ×
+    %h3=header
+  .modal-body
+    %p=content
+  .modal-footer
+    %a.btn{"data-dismiss" => "modal", "aria-hidden"=>"true"} Close
+    %a.btn.btn-success Save changes
