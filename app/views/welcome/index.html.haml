@@ -67,7 +67,7 @@
   .row-fluid#about
     = render "about"
   .row-fluid#pricing
-    = render "pricing"
+    = render "beta"
   .row-fluid#contact
     = render "contact_us/index"
   .row-fluid
@@ -83,3 +83,4 @@
       %small Seeing is believing, so try it out for yourself. No credit card required.
     .span4.signup
       =link_to "Sign up for our Private Beta","#myModal", class: "btn btn-success btn-large", data: {toggle: "modal"}
+= render "shared/signup_modal"
