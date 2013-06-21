@@ -29,22 +29,12 @@ gem 'haml-rails'
 gem 'jquery-rails'
 gem 'pg', group: [:production]
 gem 'devise'
-gem 'rspec-rails'
 gem 'filepicker-rails'
 gem 'simple_form'
 gem 'rest-client'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+  gem 'vcr', '~> 2.5.0'
+  gem 'cucumber', '~> 1.3.2'
+end
