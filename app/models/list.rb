@@ -8,12 +8,17 @@ class List < ActiveRecord::Base
   belongs_to :user
 
   def parse_csv
+    result = {}
+
     begin
       response = RestClient.get self.csv_url
       result = CSV.parse response, :headers => false
     rescue
       puts "error"
+      result = "error"
     end
 
+    result
   end
+
 end

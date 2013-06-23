@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://fireflyapi.com/api/sms
+    body:
+      encoding: US-ASCII
+      string: api=9uzQsvMNTyggsNvkirPN&number=09172416140&message=test
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '56'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - '200'
+      X-Powered-By:
+      - Phusion Passenger (mod_rails/mod_rack) 3.0.19
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"2ef0bc08f9b4fa4c7ecc4092f387c4c7"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d3b33e930233d4384dc4149713e77705
+      X-Runtime:
+      - '0.607861'
+      Date:
+      - Sun, 23 Jun 2013 07:39:21 GMT
+      X-Rack-Cache:
+      - invalidate, pass
+      Server:
+      - nginx/1.2.6 + Phusion Passenger 3.0.19
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":"success","message":"Message Sent","code":"200"}'
+    http_version: 
+  recorded_at: Sun, 23 Jun 2013 07:43:56 GMT
+recorded_with: VCR 2.5.0

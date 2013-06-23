@@ -1,0 +1,67 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.filepicker.io/api/file/stA3AwKzSc2mQ6Ds25jL
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 23 Jun 2013 10:22:36 GMT
+      Content-Type:
+      - text/csv
+      Content-Length:
+      - '24'
+      Connection:
+      - keep-alive
+      Content-Disposition:
+      - inline; filename="list.csv"
+      Cache-Control:
+      - public, max-age=3600, no-transform
+      Set-Cookie:
+      - session="s6PlJSwbPJgC8lI7M8Z4ZSYVNDE=?_id=UydfTlx4ZDRceGQ4XHgxYUFceGE0XHgxNGxSXHRwOVx4YzNxXHhhMicKcDEKLg==";
+        Domain=.filepicker.io; Path=/; HttpOnly
+      X-Amz-Id-2:
+      - jKpQN+h05mbzH5mvTxXnFCbg8dw1DXjoaurjApQn+cPT0lLYI2IfO81wglnWe98n
+      X-Amz-Request-Id:
+      - CDFEF96355BF8B94
+      Last-Modified:
+      - Sat, 15 Jun 2013 16:25:56 GMT
+      Etag:
+      - ! '"ec49ebb18b116eb3ae83363fce0badb6-1"'
+      Accept-Ranges:
+      - bytes
+      X-File-Name:
+      - list.csv
+      Access-Control-Allow-Headers:
+      - CONTENT-TYPE, X-NO-STREAM
+      Access-Control-Allow-Methods:
+      - DELETE, GET, HEAD, POST, PUT
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Max-Age:
+      - '21600'
+    body:
+      encoding: US-ASCII
+      string: ! '09172416140
+
+        09052018884
+
+'
+    http_version: 
+  recorded_at: Sun, 23 Jun 2013 10:22:36 GMT
+recorded_with: VCR 2.5.0

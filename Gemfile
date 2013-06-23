@@ -37,4 +37,5 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'vcr', '~> 2.5.0'
   gem 'cucumber', '~> 1.3.2'
+  gem 'webmock'
 end
