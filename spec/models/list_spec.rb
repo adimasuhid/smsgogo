@@ -6,7 +6,7 @@ describe List do
   describe "#parse_csv" do
 
     before :each do
-      @list = List.new(csv_url:"https://www.filepicker.io/api/file/stA3AwKzSc2mQ6Ds25jL")
+      @list = FactoryGirl.build(:list)
     end
 
     it "returns 2 rows" do
