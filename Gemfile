@@ -34,6 +34,7 @@ gem 'simple_form'
 gem 'rest-client'
 
 group :development, :test do
+  gem 'capybara', '~> 2.1.0'
   gem 'rspec-rails', '~> 2.0'
   gem 'vcr', '~> 2.5.0'
   gem 'webmock', '~> 1.11.0'
