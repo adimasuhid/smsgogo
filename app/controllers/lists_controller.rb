@@ -7,17 +7,9 @@ class ListsController < ApplicationController
     @list = current_user.lists.new params[:list]
 
     if @list.save
-      recipients = []
-
       numbers = @list.parse_csv
 
-      #create_recipients
-      numbers.each do |num|
-        #search if recipient exists
-        recipient = Recipient.where(number:num[0]).first
-        recipient ||= Recipient.create!(number:num[0])
-        recipients << recipient.id
-      end
+      recipients = Recipient.save_details @numbers
       
       #create_recipient_lists
       recipients.each do |rec|

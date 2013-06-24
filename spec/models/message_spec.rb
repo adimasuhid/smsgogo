@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Message do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "#send_bulk" do
+    it "return a success status" do
+      
+    end
+  end
 end

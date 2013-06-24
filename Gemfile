@@ -38,6 +38,4 @@ group :development, :test do
   gem 'vcr', '~> 2.5.0'
   gem 'webmock', '~> 1.11.0'
   gem 'factory_girl_rails' , '~> 4.0'
-  gem 'cucumber-rails', '~> 1.3.1'
-  gem 'database_cleaner', '~> 1.0.1'
 end
