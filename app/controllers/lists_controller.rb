@@ -9,10 +9,10 @@ class ListsController < ApplicationController
     if @list.save
       numbers = @list.parse_csv
 
-      recipients = Recipient.save_details @numbers
+      recipient_ids = Recipient.save_details @numbers
       
       #create_recipient_lists
-      recipients.each do |rec|
+      recipient_ids.each do |rec|
         @list.recipient_lists.create!(recipient_id: rec)
       end
 
